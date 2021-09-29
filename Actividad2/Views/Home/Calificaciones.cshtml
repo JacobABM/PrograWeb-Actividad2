@@ -1,0 +1,28 @@
+﻿@model Actividad2.Models.PerfilViewModel
+<html>
+<head>
+    <title>Calificacion</title>
+</head>
+<body>
+    <h1>Calificaciones</h1>
+    <form method="post" action="~/Home/Calificaciones">
+
+        <label>Primer Momento:</label>
+        <input  min="0" max="100" type="number" name="Numero1" @Model.Numero1 /> <br />
+
+        <label>Segundo Momento:</label>
+        <input  min="0" max="100" type="number" name="Numero2" @Model.Numero2 /> <br />
+
+        <label>Tercer Momento:</label>
+        <input min="0" max="100" type="number" name="Numero3" @Model.Numero3 /> <br /> <br />
+
+        <input type="submit" value="Generar Promedio" /> <br />
+
+        <h4>Promedio Final</h4>
+        <input type="number" readonly="readonly" value="@Model.Resultado" />
+        <h3>Estado:</h3>
+        <input type="text" readonly="readonly" value="@Model.Estado" />
+
+    </form>
+</body>
+</html>
